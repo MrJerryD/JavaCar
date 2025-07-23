@@ -19,19 +19,20 @@ public class Main {
         japanCar.add(new Cars(2, 3500, true, TransmissionType.AUTOMATIC));
         japanCar.add(new Cars(4, 1700, true, TransmissionType.MANUAL));
         japanCar.add(new Cars(6, 5000, true, TransmissionType.MANUAL));
-        RentCars japanRentCars = new RentCars("Honda", japanCar);
+
+        RentCars japanRendCars = new RentCars(CarBrand.HONDA, japanCar);
 
         List<Cars> mercedesCar = new ArrayList<>();
         mercedesCar.add(new Cars(6, 4500, true, TransmissionType.AUTOMATIC));
         mercedesCar.add(new Cars(4, 2700, true, TransmissionType.AUTOMATIC));
         mercedesCar.add(new Cars(2, 10000, true, TransmissionType.MANUAL));
-        RentCars germanyRendCars = new RentCars("Mercedes", mercedesCar);
+
+        RentCars germanyRendCars = new RentCars(CarBrand.MERCEDES, mercedesCar);
 
         BookingCar bookingCar = new BookingCar();
 
         bookingCar.book(germanyRendCars, amyClient, 2);
-        System.out.println();
-        bookingCar.book(japanRentCars, amyClient, 4);
+        bookingCar.book(japanRendCars, lilaClient, 4);
 
     }
 }
