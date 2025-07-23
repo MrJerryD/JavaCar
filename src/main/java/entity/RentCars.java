@@ -4,21 +4,22 @@ import java.util.List;
 
 public class RentCars {
 
-    private String ModelCar;
+//    private String ModelCar;
+    private CarBrand carBrand;
 
     private List<Cars> cars;
 
-    public RentCars(String modelCar, List<Cars> cars) {
-        ModelCar = modelCar;
+    public RentCars(CarBrand carBrand, List<Cars> cars) {
+        this.carBrand = carBrand;
         this.cars = cars;
     }
 
-    public String getModelCar() {
-        return ModelCar;
+    public CarBrand getCarBrand() {
+        return carBrand;
     }
 
-    public void setModelCar(String modelCar) {
-        ModelCar = modelCar;
+    public void setCarBrand(CarBrand carBrand) {
+        this.carBrand = carBrand;
     }
 
     public List<Cars> getCars() {
